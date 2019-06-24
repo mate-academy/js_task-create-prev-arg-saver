@@ -18,9 +18,9 @@ function createPrevArgSaver(arg) {
 // write code here
   let prev;
   let newItem;
-  return (i) => {
+  return (item) => {
     prev = newItem;
-    newItem = i;
+    newItem = item;
     return prev;
   };
 }
