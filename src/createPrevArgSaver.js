@@ -15,9 +15,9 @@
  */
 function createPrevArgSaver(arg) {
   let previousVar;
-  return (a) => {
+  return (argSaverValue) => {
     const innerVar = previousVar;
-    previousVar = a;
+    previousVar = argSaverValue;
     return innerVar;
   };
 };
