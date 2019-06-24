@@ -16,6 +16,14 @@
  */
 function createPrevArgSaver(arg) {
   // write code here
+  let prevVal;
+  let newVal;
+  return function(thisVal) {
+    newVal = prevVal;
+    prevVal = thisVal;
+
+    return newVal;
+  };
 }
 
 module.exports = createPrevArgSaver;
