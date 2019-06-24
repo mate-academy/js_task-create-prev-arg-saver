@@ -1,5 +1,4 @@
 'use strict';
-
 /**
  * Write a function (factory) creating a function (device) returning its first
  * argument from previous call. The first call should return undefined
@@ -15,7 +14,11 @@
  * @param arg
  */
 function createPrevArgSaver(arg) {
-  // write code here
-}
-
+  let previousVar;
+  return (a) => {
+    const innerVar = previousVar;
+    previousVar = a;
+    return innerVar;
+  };
+};
 module.exports = createPrevArgSaver;
