@@ -14,12 +14,11 @@
  *
  * @param arg
  */
-function createPrevArgSaver(arg) {
+function createPrevArgSaver() {
   let currentValue;
-  let prevValue = currentValue;
 
   return function thisValue(el) {
-    prevValue = currentValue;
+    const prevValue = currentValue;
     currentValue = el;
     return prevValue;
   };
