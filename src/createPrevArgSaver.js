@@ -16,13 +16,13 @@
  */
 function createPrevArgSaver(arg) {
   let prevValue;
-  let nextValue;
+  let newValue;
 
   return function(currentValue) {
-    nextValue = prevValue;
+    newValue = prevValue;
     prevValue = currentValue;
 
-    return nextValue;
+    return newValue;
   };
 }
 
