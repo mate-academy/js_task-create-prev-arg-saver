@@ -15,39 +15,15 @@
  * @param arg
  */
 function createPrevArgSaver() {
-  const factory = function() {
-    const previousValue = [];
+  let previousValue;
 
-    const device = function(arg) {
-      previousValue.push(arg);
-      return previousValue[previousValue.length - 2];
-    };
+  const device = function(arg) {
+    const tempValue = previousValue;
+    previousValue = arg;
 
-    return device;
+    return tempValue;
   };
-
-  const deviceOne = factory();
-
-  return deviceOne;
+  return device;
 }
 
 module.exports = createPrevArgSaver;
-
-// const factory = function(arg) {
-//   const previousValue = [];
-
-//   const device = function(arg) {
-//     previousValue.push(arg);
-//     return previousValue[previousValue.length - 2];
-//   };
-
-//   return device;
-// }
-
-// const deviceOne = factory();
-
-// console.log(deviceOne(1));
-
-// console.log(deviceOne(2));
-
-// console.log(deviceOne(3));
