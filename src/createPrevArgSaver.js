@@ -16,6 +16,14 @@
  */
 function createPrevArgSaver(arg) {
   // write code here
+  let prevArgValue;
+
+  return function(incomeValue) {
+    const giveBackValue = prevArgValue;
+    prevArgValue = incomeValue;
+
+    return giveBackValue;
+  };
 }
 
 module.exports = createPrevArgSaver;
