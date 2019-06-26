@@ -14,18 +14,14 @@
  *
  * @param arg
  */
-function createPrevArgSaver(arg) {
-  const arraOFPreValues = [];
+function createPrevArgSaver() {
+  let currentItme;
 
-  function argSaver(newArs) {
-    arraOFPreValues.push(newArs);
-    let result;
+  function argSaver(args) {
+    const PreItem = currentItme;
+    currentItme = args;
 
-    for (let i = 0; i < arraOFPreValues.length; i++) {
-      result = arraOFPreValues[i - 1];
-    }
-
-    return result;
+    return PreItem;
   }
 
   return argSaver;
