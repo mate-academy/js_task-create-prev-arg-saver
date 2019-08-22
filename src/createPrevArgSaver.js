@@ -16,9 +16,9 @@
  */
 function createPrevArgSaver() {
   let temp;
-  let prewios;
+
   return function(arg) {
-    prewios = temp;
+    const prewios = temp;
     temp = arg;
     return prewios;
   };
