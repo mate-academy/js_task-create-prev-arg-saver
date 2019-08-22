@@ -15,7 +15,27 @@
  * @param arg
  */
 function createPrevArgSaver(arg) {
-  // write code here
+  let countedFirstCall = 0;
+  let pastValue;
+
+  const savePreviousValue = function(value) {
+    return () => value;
+  };
+
+  function returnPreviousValue(presentValue) {
+    if (countedFirstCall > 0) {
+      const previousValue = savePreviousValue(pastValue);
+      pastValue = presentValue;
+
+      return previousValue();
+    } else {
+      pastValue = presentValue;
+      countedFirstCall++;
+      return arg;
+    }
+  }
+
+  return returnPreviousValue;
 }
 
 module.exports = createPrevArgSaver;
