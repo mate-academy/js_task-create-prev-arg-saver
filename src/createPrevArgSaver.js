@@ -15,11 +15,13 @@
  * @param arg
  */
 function createPrevArgSaver(arg) {
-  const argsArr = [arg];
+  let storedArg = arg;
+  let nextArg;
 
   return function(number) {
-    argsArr.push(number);
-    return argsArr[argsArr.length - 2];
+    storedArg = nextArg;
+    nextArg = number;
+    return storedArg;
   };
 }
 
