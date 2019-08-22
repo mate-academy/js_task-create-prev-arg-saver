@@ -17,15 +17,11 @@
 function createPrevArgSaver(arg) {
   let pastValue;
 
-  const savePreviousValue = function(value) {
-    return () => value;
-  };
-
   function returnPreviousValue(presentValue) {
-    const previousValue = savePreviousValue(pastValue);
+    const previousValue = pastValue;
     pastValue = presentValue;
 
-    return previousValue();
+    return previousValue;
   }
 
   return returnPreviousValue;
