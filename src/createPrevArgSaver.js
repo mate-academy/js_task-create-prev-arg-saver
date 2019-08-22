@@ -15,7 +15,13 @@
  * @param arg
  */
 function createPrevArgSaver(arg) {
-  // write code here
+  const previousArg = [];
+
+  // eslint-disable-next-line no-shadow
+  return function saved(arg) {
+    previousArg.push(arg);
+    return previousArg[previousArg.length - 2];
+  };
 }
 
 module.exports = createPrevArgSaver;
