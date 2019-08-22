@@ -14,13 +14,15 @@
  *
  * @param arg
  */
+
 function createPrevArgSaver() {
   let temp;
   let prewios;
+
   return function(arg) {
-    prewios = temp;
-    temp = arg;
-    return prewios;
+    temp = prewios;
+    prewios = arg;
+    return temp;
   };
 }
 
