@@ -17,9 +17,8 @@
 function createPrevArgSaver(arg) {
   const previousArg = [];
 
-  // eslint-disable-next-line no-shadow
-  return function saved(arg) {
-    previousArg.push(arg);
+  return (number) => {
+    previousArg.push(number);
     return previousArg[previousArg.length - 2];
   };
 }
