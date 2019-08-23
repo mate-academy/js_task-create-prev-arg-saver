@@ -1,13 +1,13 @@
 'use strict';
 
 function createPrevArgSaver(arg) {
-  let nowArg = arg;
+  let firstArg = arg;
 
   return function(number) {
-    const previousArg = nowArg;
-    nowArg = number;
+    const secondArg = firstArg;
+    firstArg = number;
 
-    return previousArg;
+    return secondArg;
   };
 }
 
