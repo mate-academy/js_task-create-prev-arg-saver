@@ -16,10 +16,11 @@
  */
 function createPrevArgSaver(arg) {
   let curArg;
-  let prevArg;
+
   return (argument) => {
-    prevArg = curArg;
+    const prevArg = curArg;
     curArg = argument;
+
     return prevArg;
   };
 }
