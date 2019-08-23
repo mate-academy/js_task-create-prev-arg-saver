@@ -16,16 +16,11 @@
  */
 
 function createPrevArgSaver(arg) {
-  const device = [];
-  let count = 0;
-
+  let prevValue;
   return (...args) => {
-    device.push([...args][0]);
-
-    const prevValue = device[count - 1];
-    count++;
-
-    return prevValue;
+    const result = prevValue;
+    prevValue = [...args][0];
+    return result;
   };
 }
 
