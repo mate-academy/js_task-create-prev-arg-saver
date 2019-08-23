@@ -17,12 +17,11 @@
 
 function createPrevArgSaver() {
   let temp;
-  let prewios;
 
   return function(arg) {
-    temp = prewios;
-    prewios = arg;
-    return temp;
+    const prewios = temp;
+    temp = arg;
+    return prewios;
   };
 }
 
