@@ -15,7 +15,13 @@
  * @param arg
  */
 function createPrevArgSaver(arg) {
-  // write code here
+  let firstCall = arg;
+
+  return number => {
+    const secondCall = firstCall;
+    firstCall = number;
+    return secondCall;
+  };
 }
 
 module.exports = createPrevArgSaver;
