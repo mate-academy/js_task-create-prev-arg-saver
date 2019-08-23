@@ -15,12 +15,12 @@
  * @param arg
  */
 function createPrevArgSaver(arg) {
-  let argument = arg;
+  let firstCall = arg;
 
-  return num => {
-    const resultArg = argument;
-    argument = num;
-    return resultArg;
+  return number => {
+    const secondCall = firstCall;
+    firstCall = number;
+    return secondCall;
   };
 }
 
