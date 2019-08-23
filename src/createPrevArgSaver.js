@@ -15,13 +15,13 @@
  * @param arg
  */
 function createPrevArgSaver(arg) {
-  let lastArg = arg;
+  let prevArg = arg;
 
   return (nextArg) => {
-    const presentArg = lastArg;
-    lastArg = nextArg;
+    const currentArg = prevArg;
+    prevArg = nextArg;
 
-    return presentArg;
+    return currentArg;
   };
 }
 
