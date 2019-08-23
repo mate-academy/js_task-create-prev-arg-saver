@@ -17,14 +17,12 @@
 function createPrevArgSaver(arg) {
   let currentArg = arg;
 
-  const device = nextArg => {
+  return nextArg => {
     const prevCall = currentArg;
     currentArg = nextArg;
 
     return prevCall;
   };
-
-  return device;
 }
 
 module.exports = createPrevArgSaver;
