@@ -17,7 +17,7 @@
 function createPrevArgSaver(arg) {
   let curArg;
   let prevArg;
-  return function(argument) {
+  return (argument) => {
     prevArg = curArg;
     curArg = argument;
     return prevArg;
