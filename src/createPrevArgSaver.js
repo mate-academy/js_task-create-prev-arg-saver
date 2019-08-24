@@ -17,9 +17,9 @@
 
 function createPrevArgSaver(arg) {
   let newArg;
-  return (...params) => {
+  return (nextArg) => {
     const prevArg = newArg;
-    newArg = params[0];
+    newArg = nextArg;
     return prevArg;
   };
 }
