@@ -15,11 +15,12 @@
  * @param arg
  */
 function createPrevArgSaver() {
-  let current;
+  let currentDevice;
   return function(arg) {
-    const previous = current;
-    current = arg;
-    return previous;
+    const previousDevice = currentDevice;
+    currentDevice = arg;
+
+    return previousDevice;
   };
 }
 
