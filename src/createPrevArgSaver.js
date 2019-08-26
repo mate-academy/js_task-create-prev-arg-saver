@@ -15,12 +15,12 @@
  * @param arg
  */
 function createPrevArgSaver(arg) {
-  let firstCallArg = arg;
+  let currentArg = arg;
 
   return number => {
-    const secondCallArg = firstCallArg;
-    firstCallArg = number;
-    return secondCallArg;
+    const prevArg = currentArg;
+    currentArg = number;
+    return prevArg;
   };
 }
 
