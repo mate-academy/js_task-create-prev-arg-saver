@@ -15,12 +15,12 @@
  * @param arg
  */
 function createPrevArgSaver(arg) {
-  let firstCall;
+  let prevValue;
 
   return function device(deviceArg) {
-    const secondCall = firstCall;
-    firstCall = deviceArg;
-    return secondCall;
+    const nextValue = prevValue;
+    prevValue = deviceArg;
+    return nextValue;
   };
 }
 
