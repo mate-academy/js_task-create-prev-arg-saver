@@ -15,10 +15,10 @@
  * @param arg
  */
 function createPrevArgSaver(arg) {
-  let result = arg;
+  let cachedArg = arg;
   return (num) => {
-    const newArg = result;
-    result = num;
+    const newArg = cachedArg;
+    cachedArg = num;
     return newArg;
   };
 };
