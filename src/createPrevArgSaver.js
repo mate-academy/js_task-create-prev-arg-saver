@@ -14,8 +14,8 @@
  *
  * @param arg
  */
-let mem;
 function createPrevArgSaver() {
+  let mem;
   return (arg) => {
     const res = mem;
     mem = arg;
