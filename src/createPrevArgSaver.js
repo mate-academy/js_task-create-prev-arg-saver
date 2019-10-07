@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /**
  * Write a function (factory) creating a function (device) returning its first
@@ -15,7 +15,16 @@
  * @param arg
  */
 function createPrevArgSaver(arg) {
-  // write code here
+
+  let numeber = arg;
+
+  return firstNum => {
+    
+    const secondNum = numeber;
+    numeber = firstNum;
+
+    return secondNum;
+  };
 }
 
 module.exports = createPrevArgSaver;
