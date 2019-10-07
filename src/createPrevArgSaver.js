@@ -15,7 +15,7 @@
  * @param arg
  */
 function createPrevArgSaver(arg) {
-  let temp;
+  let temp = arg;
   return argument => {
     const lastargument = temp;
     temp = argument;
