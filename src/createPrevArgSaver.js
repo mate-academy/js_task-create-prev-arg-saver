@@ -15,12 +15,12 @@
  * @param arg
  */
 function createPrevArgSaver(arg) {
-  let output = arg;
+  let container = arg;
 
   return input => {
-    const container = output;
-    output = input;
-    return container;
+    const output = container;
+    container = input;
+    return output;
   };
 }
 
