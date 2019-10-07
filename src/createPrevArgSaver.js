@@ -16,9 +16,10 @@
  */
 function createPrevArgSaver(arg) {
   let param = arg;
-  return n => {
+
+  return int => {
     const result = param;
-    param = n;
+    param = int;
     return result;
   };
 }
