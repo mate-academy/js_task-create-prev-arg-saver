@@ -16,6 +16,14 @@
  */
 function createPrevArgSaver(arg) {
   // write code here
+  let applyingArguments = arg;
+
+  return (previousСall) => {
+    const previousArguments = applyingArguments;
+    applyingArguments = previousСall;
+
+    return previousArguments;
+  };
 }
 
 module.exports = createPrevArgSaver;
