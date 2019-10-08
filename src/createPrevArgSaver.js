@@ -14,7 +14,7 @@
  *
  * @param arg
  */
-function createPrevArgSaver() {
+function createPrevArgSaver(...params) {
   const prevArgs = [];
 
   return (arg) => {
