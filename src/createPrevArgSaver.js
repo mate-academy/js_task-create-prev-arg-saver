@@ -16,9 +16,9 @@
  */
 function createPrevArgSaver(arg) {
   let start = arg;
-  let finish;
+
   return (values) => {
-    finish = start;
+    const finish = start;
     start = values;
     return finish;
   };
