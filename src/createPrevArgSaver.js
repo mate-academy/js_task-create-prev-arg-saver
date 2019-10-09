@@ -18,10 +18,10 @@ function createPrevArgSaver(arg) {
   let oldArg = arg;
 
   return (newArg) => {
-    const arg2 = oldArg;
+    const result = oldArg;
     oldArg = newArg;
 
-    return arg2;
+    return result;
   };
 }
 
