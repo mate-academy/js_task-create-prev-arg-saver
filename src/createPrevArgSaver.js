@@ -12,10 +12,27 @@
  * argSaver() // return 456
  * argSaver(789) // return undefined
  *
- * @param arg
+ * @returns {Function}
  */
-function createPrevArgSaver(arg) {
-  // write code here
+function createPrevArgSaver() {
+  let buffer = '';
+  let count = 0;
+  return (args) => {
+    if (args && count === 0) {
+      buffer = args;
+      count++;
+      return undefined;
+    } else {
+      const bufferCopy = buffer;
+      if (args && count > 0) {
+        buffer = args;
+      } else {
+        buffer = '';
+        count = 0;
+      }
+      return bufferCopy;
+    }
+  };
 }
 
 module.exports = createPrevArgSaver;
