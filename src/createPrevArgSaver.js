@@ -14,8 +14,17 @@
  *
  * @param arg
  */
-function createPrevArgSaver(arg) {
-  // write code here
+function createPrevArgSaver(arg = undefined) {
+  const arr = [];
+  let counter = 0;
+
+  function device(args) {
+    counter++;
+    arr[counter] = args;
+    return arr[counter - 1];
+  }
+
+  return device;
 }
 
 module.exports = createPrevArgSaver;
