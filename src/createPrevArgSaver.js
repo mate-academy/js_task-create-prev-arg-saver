@@ -17,7 +17,7 @@
 function createPrevArgSaver(arg) {
   let previousArg;
 
-  return function(currentArg) {
+  return currentArg => {
     const result = previousArg;
     previousArg = currentArg;
 
