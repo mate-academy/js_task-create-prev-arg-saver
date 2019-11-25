@@ -15,23 +15,11 @@
  * @returns {Function}
  */
 function createPrevArgSaver() {
-  let buffer = '';
-  let count = 0;
+  let buffer;
   return (args) => {
-    if (args && count === 0) {
-      buffer = args;
-      count++;
-      return undefined;
-    } else {
-      const bufferCopy = buffer;
-      if (args && count > 0) {
-        buffer = args;
-      } else {
-        buffer = '';
-        count = 0;
-      }
-      return bufferCopy;
-    }
+    const bufferCopy = buffer;
+    buffer = args;
+    return bufferCopy;
   };
 }
 
