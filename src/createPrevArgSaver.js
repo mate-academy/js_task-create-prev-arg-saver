@@ -16,9 +16,11 @@
  */
 function createPrevArgSaver(arg) {
   let saved;
+
   return function(number) {
     const res = saved;
     saved = number;
+
     return res;
   };
 }
