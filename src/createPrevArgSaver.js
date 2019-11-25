@@ -17,7 +17,7 @@
 function createPrevArgSaver(arg) {
   const arrOfArgs = [];
 
-  return function(item) {
+  return function device(item) {
     arrOfArgs.push(item);
 
     return arrOfArgs[arrOfArgs.length - 2];
