@@ -16,14 +16,11 @@
  */
 function createPrevArgSaver(arg = undefined) {
   const arr = [];
-  let counter = 0;
 
-  function device(args) {
-    counter++;
-    arr[counter] = args;
-    return arr[counter - 1];
+  function device(prev) {
+    arr.push(prev);
+    return arr[arr.indexOf(prev) - 1];
   }
-
   return device;
 }
 
