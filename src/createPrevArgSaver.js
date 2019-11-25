@@ -15,12 +15,14 @@
  * @param arg
  */
 function createPrevArgSaver() {
-  const buffer = [];
+  let previous;
+  let buffer;
 
   return function(arg) {
-    buffer.push(arg);
+    buffer = previous;
+    previous = arg;
 
-    return buffer[buffer.length - 2];
+    return buffer;
   };
 };
 
