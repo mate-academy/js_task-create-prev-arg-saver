@@ -17,9 +17,11 @@
 function createPrevArgSaver(arg) {
   // write code here
   let previous;
+
   return function(next) {
     const result = previous;
     previous = next;
+
     return result;
   };
 }
