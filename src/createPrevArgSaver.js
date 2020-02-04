@@ -15,12 +15,12 @@
  * @param arg
  */
 function createPrevArgSaver(arg) {
-  let cache = arg;
+  let prevArg = arg;
 
   function mix(next) {
-    const returning = cache;
+    const returning = prevArg;
 
-    cache = next;
+    prevArg = next;
 
     return returning;
   }
