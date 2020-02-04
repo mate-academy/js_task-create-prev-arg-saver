@@ -15,12 +15,14 @@
  * @param arg
  */
 function createPrevArgSaver() {
-  const array = [];
+  let firstArg;
 
   return function(value) {
-    array.unshift(value);
+    const temp = firstArg;
 
-    return array[1];
+    firstArg = value;
+
+    return temp;
   };
 }
 
