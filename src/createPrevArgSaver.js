@@ -15,7 +15,15 @@
  * @param arg
  */
 function createPrevArgSaver(arg) {
-  // write code here
+  let i;
+
+  return function(x) {
+    const i2 = i;
+
+    i = x;
+
+    return i2;
+  };
 }
 
 module.exports = createPrevArgSaver;
