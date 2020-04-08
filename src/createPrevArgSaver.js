@@ -16,6 +16,15 @@
  */
 function createPrevArgSaver(arg) {
   // write code here
+
+  const device = (newValue) => {
+    createPrevArgSaver.prevValue = createPrevArgSaver.carValue;
+    createPrevArgSaver.carValue = newValue;
+
+    return createPrevArgSaver.prevValue;
+  };
+
+  return device;
 }
 
 module.exports = createPrevArgSaver;
