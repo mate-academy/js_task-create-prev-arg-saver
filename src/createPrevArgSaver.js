@@ -14,8 +14,14 @@
  *
  * @param arg
  */
-function createPrevArgSaver(arg) {
-  // write code here
+function createPrevArgSaver() {
+  const arr = [];
+
+  return function createRecipe(value) {
+    arr.push(value);
+
+    return (arr.length === 1) ? undefined : arr.shift();
+  };
 }
 
 module.exports = createPrevArgSaver;
