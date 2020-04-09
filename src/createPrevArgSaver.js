@@ -15,7 +15,15 @@
  * @param arg
  */
 function createPrevArgSaver(arg) {
-  // write code here
+  let count;
+  let currentCount;
+
+  return function(a) {
+    currentCount = count;
+    count = a;
+
+    return currentCount;
+  };
 }
 
 module.exports = createPrevArgSaver;
