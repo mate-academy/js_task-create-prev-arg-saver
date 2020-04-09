@@ -18,11 +18,11 @@ function createPrevArgSaver(arg) {
   let call = arg;
 
   return function(device) {
-    const carrent = call;
+    const firstCall = call;
 
     call = device;
 
-    return carrent;
+    return firstCall;
   };
 }
 
