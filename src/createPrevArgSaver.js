@@ -15,7 +15,17 @@
  * @param arg
  */
 function createPrevArgSaver(arg) {
-  // write code here
+  let firstCall;
+  let secondCall;
+
+  function add(number) {
+    firstCall = secondCall;
+    secondCall = number;
+
+    return firstCall;
+  }
+
+  return add;
 }
 
 module.exports = createPrevArgSaver;
