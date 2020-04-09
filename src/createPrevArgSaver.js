@@ -16,6 +16,16 @@
  */
 function createPrevArgSaver(arg) {
   // write code here
-}
+  let n = 0;
+  let a = 0;
+  const device = (x) => {
+    const res = n++ === 0 ? undefined : a;
 
+    a = x;
+
+    return res;
+  };
+
+  return device;
+}
 module.exports = createPrevArgSaver;
