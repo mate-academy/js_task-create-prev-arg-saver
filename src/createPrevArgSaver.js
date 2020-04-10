@@ -11,10 +11,8 @@
  * argSaver(456) // return 123
  * argSaver() // return 456
  * argSaver(789) // return undefined
- *
- * @param arg
  */
-function createPrevArgSaver(arg) {
+function createPrevArgSaver() {
   // write code here
 }
 
