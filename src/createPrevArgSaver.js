@@ -13,7 +13,18 @@
  * argSaver(789) // return undefined
  */
 function createPrevArgSaver() {
-  // write code here
+  createPrevArgSaver.count = -1;
+
+  const prevArguments = [];
+
+  return function(argument) {
+    prevArguments.push(argument);
+    createPrevArgSaver.count++;
+
+    return createPrevArgSaver.count === 0
+      ? undefined
+      : prevArguments[createPrevArgSaver.count - 1];
+  };
 }
 
 module.exports = createPrevArgSaver;
