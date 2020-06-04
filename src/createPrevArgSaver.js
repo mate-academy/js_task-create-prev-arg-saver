@@ -13,13 +13,14 @@
  * argSaver(789) // return undefined
  */
 function createPrevArgSaver() {
-  const saver = [];
-  let count = -1;
+  let past;
 
   return (unit) => {
-    saver[saver.length] = unit;
+    const result = past;
 
-    return saver[count++];
+    past = unit;
+
+    return result;
   };
 }
 
