@@ -13,7 +13,17 @@
  * argSaver(789) // return undefined
  */
 function createPrevArgSaver() {
-  // write code here
+  let previousValue;
+
+  function argSaver(value) {
+    const currentValue = previousValue;
+
+    previousValue = value;
+
+    return currentValue;
+  };
+
+  return argSaver;
 }
 
 module.exports = createPrevArgSaver;
