@@ -12,8 +12,18 @@
  * argSaver() // return 456
  * argSaver(789) // return undefined
  */
-function createPrevArgSaver() {
-  // write code here
+function createPrevArgSaver(arg) {
+  let newValue;
+
+  const device = (value) => {
+    const prevValue = newValue;
+
+    newValue = value;
+
+    return prevValue;
+  };
+
+  return device;
 }
 
 module.exports = createPrevArgSaver;
