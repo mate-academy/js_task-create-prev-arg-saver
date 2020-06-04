@@ -25,13 +25,3 @@ function createPrevArgSaver() {
 }
 
 module.exports = createPrevArgSaver;
-
-// const argSaver = createPrevArgSaver();
-
-// console.log(argSaver(123));
-
-// console.log(argSaver(456));
-
-// console.log(argSaver());
-
-// console.log(argSaver(789));
