@@ -16,7 +16,7 @@ function createPrevArgSaver() {
   let cache;
   let currentValue;
 
-  return (num) => {
+  return num => {
     cache = currentValue;
     currentValue = num;
 
