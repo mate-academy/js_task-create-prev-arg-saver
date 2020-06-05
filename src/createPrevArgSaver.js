@@ -14,6 +14,15 @@
  */
 function createPrevArgSaver() {
   // write code here
+  let curValue;
+
+  return (value) => {
+    const prevValue = curValue;
+
+    curValue = value;
+
+    return prevValue;
+  };
 }
 
 module.exports = createPrevArgSaver;
