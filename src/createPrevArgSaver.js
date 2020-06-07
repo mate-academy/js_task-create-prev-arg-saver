@@ -15,7 +15,7 @@
 function createPrevArgSaver() {
   let previous;
 
-  return function(device) {
+  return device => {
     let current = device;
 
     [previous, current] = [current, previous];
