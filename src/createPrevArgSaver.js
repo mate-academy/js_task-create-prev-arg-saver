@@ -14,12 +14,9 @@
  */
 function createPrevArgSaver() {
   let lastArgument;
-  const argsSaver = function(arg) {
-    return arg;
-  };
 
   return currentArgument => {
-    const saver = argsSaver(lastArgument);
+    const saver = lastArgument;
 
     lastArgument = currentArgument;
 
