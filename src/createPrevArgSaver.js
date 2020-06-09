@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 'use strict';
 
 /**
@@ -17,7 +16,7 @@ function createPrevArgSaver() {
   // write code here
   const memory = [];
 
-  return function returner(newElem) {
+  return function device(newElem) {
     const before = memory[0];
 
     memory.unshift(newElem);
@@ -26,9 +25,4 @@ function createPrevArgSaver() {
   };
 }
 
-const argSaver = createPrevArgSaver();
-
-console.log(argSaver(1));
-console.log(argSaver(100));
-console.log(argSaver(1123));
 module.exports = createPrevArgSaver;
