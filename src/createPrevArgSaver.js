@@ -13,14 +13,14 @@
  * argSaver(789) // return undefined
  */
 function createPrevArgSaver() {
-  let curArg;
+  let currentArg;
 
   return (arg) => {
-    const prevArg = curArg;
+    const previousArg = currentArg;
 
-    curArg = arg;
+    currentArg = arg;
 
-    return prevArg;
+    return previousArg;
   };
 }
 
