@@ -12,7 +12,7 @@
  * argSaver() // return 456
  * argSaver(789) // return undefined
  */
-function createPrevArgSaver(n) {
+function createPrevArgSaver() {
   let prev;
 
   return current => {
