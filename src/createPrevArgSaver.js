@@ -14,6 +14,15 @@
  */
 function createPrevArgSaver() {
   // write code here
+  const memory = [];
+
+  return function device(newElem) {
+    const before = memory[0];
+
+    memory.unshift(newElem);
+
+    return before;
+  };
 }
 
 module.exports = createPrevArgSaver;
