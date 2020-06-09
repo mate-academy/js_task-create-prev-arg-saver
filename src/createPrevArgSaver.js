@@ -16,11 +16,11 @@ function createPrevArgSaver() {
   let lastArgument;
 
   return currentArgument => {
-    const saver = lastArgument;
+    const previous = lastArgument;
 
     lastArgument = currentArgument;
 
-    return saver;
+    return previous;
   };
 }
 
