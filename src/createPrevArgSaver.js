@@ -14,6 +14,12 @@
  */
 function createPrevArgSaver() {
   // write code here
-}
+  let firstElement = arg;
 
+  return function(number) {
+    const secondElement = firstElement;
+    firstElement = number;
+    return secondElement;
+  };
+}
 module.exports = createPrevArgSaver;
