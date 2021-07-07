@@ -14,6 +14,14 @@
  */
 function createPrevArgSaver() {
   // write code here
+  let currentArgument,
+    previousArgument;
+
+  return function(arg) {
+    currentArgument = previousArgument;
+    previousArgument = arg;
+    return currentArgument;
+  };
 }
 
 module.exports = createPrevArgSaver;
