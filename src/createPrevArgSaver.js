@@ -14,6 +14,16 @@
  */
 function createPrevArgSaver() {
   // write code here
+  // переменная, у которой значение undefind
+  let x;
+
+  const device = (arg) => {
+    const result = x;
+    x = arg;
+    return result;
+  };
+
+  return device;
 }
 
 module.exports = createPrevArgSaver;
